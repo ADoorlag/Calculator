@@ -1,15 +1,15 @@
 <html>
 <head>
 <body align="center" bgcolor="5F5C5A">
-<link rel="stylesheet" href="calc.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="header">Calculator</div>
-<input type= "text" name = "result field" id="result_field"></input>
-<table align="center">
+<input type= "text" name = "result-field" id="result-field"></input>
+<table class="calc">
 	<tr>
 		<th><button class="button1" onclick=Erase()>C</th>
-		<th><button class="button1" onclick=Backspace()><--</th>
+		<th><button class="button1" onclick=Backspace()><=</th>
 		<th><button class="button1" onclick=AddOpenParent()>(</th>
 		<th><button class="button2" onclick=Division()>/</th>
 	</tr>
@@ -43,10 +43,11 @@
 	</tr>
 </table>
 
+
 <h2>Project by Alex Doorlag</h2>
 
 <script>
-var field=document.getElementById("result_field");
+const field = document.getElementById("result-field");
 
 function Erase(){
 	field.value=("");
@@ -125,7 +126,7 @@ function Backspace(){
 };
 
 function Operate(){
-	var input= field.value
+	const input= field.value
 	result_field.value= eval(input);
 };
 </script>
