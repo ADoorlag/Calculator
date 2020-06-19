@@ -1,0 +1,74 @@
+.header {
+  font-size: 60px;
+  font-weight: bold;
+  float: center;
+  color: white;
+}
+
+Input {
+  text-align: right;
+  font-size: 25px;
+  height: 35px;
+  width: 26.15%;
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table th {
+  border: 1px solid black;
+}
+
+tr th:nth-child(1) {
+  background-color: #c2bab2;
+}
+
+tr th:nth-child(2) {
+  background-color: #c2bab2;
+}
+
+tr th:nth-child(3) {
+  background-color: #c2bab2;
+}
+
+tr th:nth-child(4) {
+  background-color: #f98006;
+}
+
+.button1 {
+  background-color: #c2bab2;
+  font-size: 30px;
+  border: none;
+  outline: 0;
+  text-align: center;
+  float: center;
+  height: 2.81em;
+  width: 2.81em;
+}
+
+.button1:active {
+  background-color: #3f3938;
+  color: white;
+}
+
+.button2 {
+  background-color: #f98006;
+  font-size: 30px;
+  border: none;
+  outline: 0;
+  text-align: center;
+  color: white;
+  height: 2.81em;
+  width: 2.81em;
+}
+
+.button2:active {
+  background-color: #bb430c;
+  color: white;
+}
+
+h2 {
+  color: white;
+}
