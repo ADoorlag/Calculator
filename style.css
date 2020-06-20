@@ -12,16 +12,23 @@ div.header {
   color: white;
 }
 
+#container {
+  width: 355px;
+  margin: 30px;
+  border: 1px solid black;
+}
+
 Input {
   text-align: right;
   font-size: 25px;
   height: 35px;
-  width: 26.15%;
+  width: 100%;
   border: 1px solid black;
 }
 
 table {
   border-collapse: collapse;
+  width: 100%;
 }
 
 table th {
