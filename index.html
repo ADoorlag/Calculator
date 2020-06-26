@@ -9,37 +9,37 @@
 	<input type= "text" name = "result-field" id="result-field"></input>
 	<table class="calc">
 	<tr>
-		<th><button class="button1" onclick=Erase()>C</th>
+		<th><button class="button1" id="clear">C</th>
 		<th><button class="button1" onclick=Backspace()><=</th>
-		<th><button class="button1" onclick=AddOpenParent()>(</th>
-		<th><button class="button2" onclick=Division()>/</th>
+		<th><button class="button1 add-value" id = "(">(</th>
+		<th><button class="button2 add-value" id = "/")>/</th>
 	</tr>
 
 	<tr>
-		<th><button class="button1" onclick=AddSeven()>7</th>
-		<th><button class="button1" onclick=AddEight()>8</th>
-		<th><button class="button1" onclick=AddNine()>9</th>
-		<th><button class="button2" onclick=Multiplication()>*</th>
+		<th><button class="button1 add-value" id = "7">7</th>
+		<th><button class="button1 add-value" id = "8">8</th>
+		<th><button class="button1 add-value" id = "9">9</th>
+		<th><button class="button2 add-value" id = "*">*</th>
 	</tr>
 
 	<tr>
-		<th><button class="button1" onclick=AddFour()>4</th>
-		<th><button class="button1" onclick=AddFive()>5</th>
-		<th><button class="button1" onclick=AddSix()>6</th>
-		<th><button class="button2" onclick=Subtraction()>-</th>
+		<th><button class="button1 add-value" id = "4">4</th>
+		<th><button class="button1 add-value" id = "5">5</th>
+		<th><button class="button1 add-value" id = "6">6</th>
+		<th><button class="button2 add-value" id = "-">-</th>
 	</tr>
 
 	<tr>
-		<th><button class="button1" onclick=AddOne()>1</th>
-		<th><button class="button1" onclick=AddTwo()>2</th>
-		<th><button class="button1" onclick=AddThree()>3</th>
-		<th><button class="button2" onclick=Addition()>+</th>
+		<th><button class="button1 add-value" id = "1">1</th>
+		<th><button class="button1 add-value" id = "2">2</th>
+		<th><button class="button1 add-value" id = "3">3</th>
+		<th><button class="button2 add-value" id = "+">+</th>
 	</tr>
 
 	<tr>
-		<th><button class="button1" onclick=AddZero()>0</th>
-		<th><button class="button1" onclick=AddClosingParent()>)</th>
-		<th><button class="button1" onclick=AddDot()>.</th>
+		<th><button class="button1 add-value" id = "0">0</th>
+		<th><button class="button1 add-value" id = ")">)</th>
+		<th><button class="button1 add-value" id = ".">.</th>
 		<th><button class="button2" onclick=Operate()>=</th>
 	</tr>
 	</table>

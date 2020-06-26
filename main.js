@@ -1,6 +1,25 @@
 const field = document.getElementById("result-field");
 
-function Erase() {
+document.querySelectorAll(".add-value").forEach((button) => {
+  button.addEventListener("click", addValue);
+});
+
+function addValue(e) {
+  //let value = "";
+  if (e.target.classList.contains("add-value")) {
+    field.value += e.target.id;
+  } else {
+    console.log("Not a valid calculator value");
+  }
+}
+
+document.getElementById("clear").addEventListener("click", clear);
+
+function clear() {
+  field.value = "";
+}
+
+/*function Erase() {
   field.value = "";
 }
 
@@ -75,6 +94,7 @@ function AddClosingParent() {
 function Backspace() {
   field.value = field.value.substring(0, field.value.length - 1);
 }
+*/
 
 function Operate() {
   const input = field.value;
