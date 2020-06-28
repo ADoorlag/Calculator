@@ -8,8 +8,6 @@ function addValue(e) {
   //let value = "";
   if (e.target.classList.contains("add-value")) {
     field.value += e.target.id;
-  } else {
-    console.log("Not a valid calculator value");
   }
 }
 
@@ -17,11 +15,20 @@ document.getElementById("clear").addEventListener("click", clear);
 document.getElementById("calculate").addEventListener("click", operate);
 document.getElementById("back").addEventListener("click", backSpace);
 
+//backspace mouse events
+document.getElementById("back").addEventListener("mousedown", () => {
+  document.getElementById("back-arrow").src = "Backspace(2).png";
+});
+
+document.getElementById("back").addEventListener("mouseup", () => {
+  document.getElementById("back-arrow").src = "Backspace.png";
+});
+
 function clear() {
   field.value = "";
 }
 
-function operate() {
+function operate(e) {
   if (field.value == "") {
     field.value = "";
     return;
@@ -29,6 +36,8 @@ function operate() {
 
   const input = field.value;
   field.value = eval(input);
+
+  e.preventDefault();
 }
 
 function backSpace() {
@@ -109,11 +118,11 @@ document.addEventListener("keypress", function (e) {
       break;
 
     case 61:
-      operate();
+      operate(e);
       break;
 
     case 13:
-      operate();
+      operate(e);
       break;
   }
 });
@@ -132,7 +141,7 @@ document.addEventListener("keydown", function (e) {
       break;
 
     case 13:
-      operate();
+      operate(e);
       break;
   }
 });
