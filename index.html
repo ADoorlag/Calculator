@@ -4,13 +4,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header">Calculator</div>
+<div class=header>Calculator</div>
 <div id="container">
-	<input type= "text" name = "result-field" id="result-field"></input>
+	<input type= "text" name = "result-field" id="result-field" disabled></input>
 	<table class="calc">
 	<tr>
 		<th><button class="button1" id="clear">C</th>
-		<th><button class="button1" onclick=Backspace()><=</th>
+		<th><button class="button1" id ="back"><=</th>
 		<th><button class="button1 add-value" id = "(">(</th>
 		<th><button class="button2 add-value" id = "/")>/</th>
 	</tr>
@@ -40,7 +40,7 @@
 		<th><button class="button1 add-value" id = "0">0</th>
 		<th><button class="button1 add-value" id = ")">)</th>
 		<th><button class="button1 add-value" id = ".">.</th>
-		<th><button class="button2" onclick=Operate()>=</th>
+		<th><button class="button2" id="calculate">=</th>
 	</tr>
 	</table>
 </div>

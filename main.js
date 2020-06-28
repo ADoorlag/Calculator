@@ -14,9 +14,20 @@ function addValue(e) {
 }
 
 document.getElementById("clear").addEventListener("click", clear);
+document.getElementById("calculate").addEventListener("click", operate);
+document.getElementById("back").addEventListener("click", backSpace);
 
 function clear() {
   field.value = "";
+}
+
+function operate() {
+  const input = field.value;
+  field.value = eval(input);
+}
+
+function backSpace() {
+  field.value = field.value.substring(0, field.value.length - 1);
 }
 
 /*function Erase() {
@@ -95,8 +106,3 @@ function Backspace() {
   field.value = field.value.substring(0, field.value.length - 1);
 }
 */
-
-function Operate() {
-  const input = field.value;
-  field.value = eval(input);
-}
