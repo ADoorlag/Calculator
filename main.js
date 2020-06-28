@@ -22,6 +22,11 @@ function clear() {
 }
 
 function operate() {
+  if (field.value == "") {
+    field.value = "";
+    return;
+  }
+
   const input = field.value;
   field.value = eval(input);
 }
@@ -30,79 +35,173 @@ function backSpace() {
   field.value = field.value.substring(0, field.value.length - 1);
 }
 
-/*function Erase() {
-  field.value = "";
-}
+//primary keyboard catching event
+document.addEventListener("keypress", function (e) {
+  const code = e.keyCode;
 
-function AddSeven() {
+  switch (code) {
+    case 49:
+      addOne();
+      break;
+
+    case 50:
+      addTwo();
+      break;
+
+    case 51:
+      addThree();
+      break;
+
+    case 52:
+      addFour();
+      break;
+
+    case 53:
+      addFive();
+      break;
+
+    case 54:
+      addSix();
+      break;
+
+    case 55:
+      addSeven();
+      break;
+
+    case 56:
+      addEight();
+      break;
+
+    case 57:
+      addNine();
+      break;
+
+    case 48:
+      addZero();
+      break;
+
+    case 40:
+      addOpenParent();
+      break;
+
+    case 41:
+      addClosingParent();
+      break;
+
+    case 46:
+      addDot();
+      break;
+
+    case 45:
+      subtraction();
+      break;
+
+    case 43:
+      addition();
+      break;
+
+    case 42:
+      multiplication();
+      break;
+
+    case 47:
+      division();
+      break;
+
+    case 61:
+      operate();
+      break;
+
+    case 13:
+      operate();
+      break;
+  }
+});
+
+//secondary backspace and delete keyboard event
+document.addEventListener("keydown", function (e) {
+  const code = e.keyCode;
+
+  switch (code) {
+    case 8:
+      backSpace();
+      break;
+
+    case 46:
+      clear();
+      break;
+
+    case 13:
+      operate();
+      break;
+  }
+});
+
+//keyboard functions
+function addSeven() {
   field.value += "7";
 }
 
-function AddEight() {
+function addEight() {
   field.value += "8";
 }
 
-function AddNine() {
+function addNine() {
   field.value += "9";
 }
 
-function AddFour() {
+function addFour() {
   field.value += "4";
 }
 
-function AddFive() {
+function addFive() {
   field.value += "5";
 }
 
-function AddSix() {
+function addSix() {
   field.value += "6";
 }
 
-function AddOne() {
+function addOne() {
   field.value += "1";
 }
 
-function AddTwo() {
+function addTwo() {
   field.value += "2";
 }
 
-function AddThree() {
+function addThree() {
   field.value += "3";
 }
 
-function AddZero() {
+function addZero() {
   field.value += "0";
 }
 
-function Addition() {
+function addition() {
   field.value += "+";
 }
 
-function Subtraction() {
+function subtraction() {
   field.value += "-";
 }
 
-function Multiplication() {
+function multiplication() {
   field.value += "*";
 }
 
-function Division() {
+function division() {
   field.value += "/";
 }
 
-function AddDot() {
+function addDot() {
   field.value += ".";
 }
 
-function AddOpenParent() {
+function addOpenParent() {
   field.value += "(";
 }
 
-function AddClosingParent() {
+function addClosingParent() {
   field.value += ")";
 }
-
-function Backspace() {
-  field.value = field.value.substring(0, field.value.length - 1);
-}
-*/
