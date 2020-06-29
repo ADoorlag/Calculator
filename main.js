@@ -5,10 +5,7 @@ document.querySelectorAll(".add-value").forEach((button) => {
 });
 
 function addValue(e) {
-  //let value = "";
-  if (e.target.classList.contains("add-value")) {
-    field.value += e.target.id;
-  }
+  field.value += e.target.id;
 }
 
 document.getElementById("clear").addEventListener("click", clear);
