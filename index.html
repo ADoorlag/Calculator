@@ -1,58 +1,60 @@
 <!DOCTYPE HTML>
-<html>
+<html lang = "en">
 <head>
-<title>Calculator</title>
-<link rel="icon" href="Calculator.png">
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.0.2/math.js" integrity="sha512-zBo23G6MLygaFVdujyoxss6muSr0qRPMaXierMCzyp8XioiEoTpxiE2QFqvV3hZM3gAA5uU6Smb55/3798hjdA==" crossorigin="anonymous"></script>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Calculator</title>
+	<link rel="icon" href="Calculator.png">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.0.2/math.js" integrity="sha512-zBo23G6MLygaFVdujyoxss6muSr0qRPMaXierMCzyp8XioiEoTpxiE2QFqvV3hZM3gAA5uU6Smb55/3798hjdA==" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1 class=header>Calculator</h1>
-<div id="error"><p>
-	Unable to evaluate this expression.
-</p></div>
-<div id="container">
-	<input type= "text" name = "result-field" id="result-field" disabled></input>
-	<table class="calc">
-	<tr>
-		<th><button class="button1" id="clear">C</th>
-		<th><button class="button1" id ="back"><img id="back-arrow" src="Backspace.png" alt=""></th>
-		<th><button class="button1 add-value" id = "(">(</th>
-		<th><button class="button2 add-value" id = "/")>/</th>
-	</tr>
+	<h1 class=header>Calculator</h1>
+	<div id="error" class="error"><p>
+		Unable to evaluate this expression.
+	</p></div>
+	<div id="container">
+		<input type= "text" name = "result-field" id="result-field" disabled></input>
+		<table class="calc">
+			<tr>
+				<th><button class="button1" id="clear">C</th>
+				<th><button class="button1" id ="back"><img id="back-arrow" src="Backspace.png" alt=""></th>		
+				<th><button class="button1 add-value" id = "(">(</th>
+				<th><button class="button2 add-value" id = "/")>/</th>
+			</tr>
 
-	<tr>
-		<th><button class="button1 add-value" id = "7">7</th>
-		<th><button class="button1 add-value" id = "8">8</th>
-		<th><button class="button1 add-value" id = "9">9</th>
-		<th><button class="button2 add-value" id = "*">*</th>
-	</tr>
+			<tr>
+				<th><button class="button1 add-value" id = "7">7</th>
+				<th><button class="button1 add-value" id = "8">8</th>
+				<th><button class="button1 add-value" id = "9">9</th>
+				<th><button class="button2 add-value" id = "*">*</th>
+			</tr>
 
-	<tr>
-		<th><button class="button1 add-value" id = "4">4</th>
-		<th><button class="button1 add-value" id = "5">5</th>
-		<th><button class="button1 add-value" id = "6">6</th>
-		<th><button class="button2 add-value" id = "-">-</th>
-	</tr>
+			<tr>
+				<th><button class="button1 add-value" id = "4">4</th>
+				<th><button class="button1 add-value" id = "5">5</th>
+				<th><button class="button1 add-value" id = "6">6</th>
+				<th><button class="button2 add-value" id = "-">-</th>
+			</tr>
 
-	<tr>
-		<th><button class="button1 add-value" id = "1">1</th>
-		<th><button class="button1 add-value" id = "2">2</th>
-		<th><button class="button1 add-value" id = "3">3</th>
-		<th><button class="button2 add-value" id = "+">+</th>
-	</tr>
+			<tr>
+				<th><button class="button1 add-value" id = "1">1</th>
+				<th><button class="button1 add-value" id = "2">2</th>
+				<th><button class="button1 add-value" id = "3">3</th>
+				<th><button class="button2 add-value" id = "+">+</th>
+			</tr>
 
-	<tr>
-		<th><button class="button1 add-value" id = "0">0</th>
-		<th><button class="button1 add-value" id = ")">)</th>
-		<th><button class="button1 add-value" id = ".">.</th>
-		<th><button class="button2" id="calculate">=</th>
-	</tr>
-	</table>
-</div>
+			<tr>
+				<th><button class="button1 add-value" id = "0">0</th>
+				<th><button class="button1 add-value" id = ")">)</th>
+				<th><button class="button1 add-value" id = ".">.</th>
+				<th><button class="button2" id="calculate">=</th>
+			</tr>
+		</table>
+	</div>
 
-<h2>Project by Alex Doorlag</h2>
+	<h2>Project by Alex Doorlag</h2>
 
 <script src="main.js">
 </script>

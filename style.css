@@ -12,6 +12,7 @@ body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
+/* title and error div*/
 .header {
   font-size: 56px;
   font-weight: bold;
@@ -37,7 +38,7 @@ body {
 /* container */
 #container {
   width: 355px;
-  margin: 30px;
+  margin: 25px;
   border: 2px solid black;
 }
 
@@ -56,6 +57,7 @@ body {
   width: 35px;
 }
 
+/*calculator table*/
 table {
   border-collapse: collapse;
   width: 100%;
@@ -65,19 +67,11 @@ table th {
   border: 1px solid black;
 }
 
-tr th:nth-child(1) {
+tr th {
   background-color: #c2bab2;
 }
 
-tr th:nth-child(2) {
-  background-color: #c2bab2;
-}
-
-tr th:nth-child(3) {
-  background-color: #c2bab2;
-}
-
-tr th:nth-child(4) {
+tr th:last-child {
   background-color: #f98006;
 }
 
@@ -113,8 +107,9 @@ tr th:nth-child(4) {
   color: white;
 }
 
+/*authorship*/
 h2 {
   color: white;
   font-size: 26px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }

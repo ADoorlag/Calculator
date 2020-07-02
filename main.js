@@ -22,21 +22,26 @@ document.getElementById("back").addEventListener("mouseup", () => {
 });
 
 //main calculator functions
+
+//clear function
 function clear() {
   field.value = "";
 }
 
+//operate function to calculate result
 function operate(e) {
+  //don't run if calculator field if empty
   if (field.value == "") {
     field.value = "";
     return;
   }
 
+  //try and catch to ensure valid expression inputs
   try {
     const input = field.value;
-    field.value = eval(input);
+    field.value = math.evaluate(input);
   } catch (err) {
-    //add show class and make it dissapear again after two seconds
+    //add show class to error div and make it dissapear again after two seconds
     document.getElementById("error").className = "show";
 
     setTimeout(() => {
@@ -49,6 +54,7 @@ function operate(e) {
   }
 }
 
+//backspace function
 function backSpace() {
   field.value = field.value.substring(0, field.value.length - 1);
 }
