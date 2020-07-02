@@ -1,11 +1,17 @@
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Calculator</title>
+<link rel="icon" href="Calculator.png">
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.0.2/math.js" integrity="sha512-zBo23G6MLygaFVdujyoxss6muSr0qRPMaXierMCzyp8XioiEoTpxiE2QFqvV3hZM3gAA5uU6Smb55/3798hjdA==" crossorigin="anonymous"></script>
 </head>
 <body>
 <h1 class=header>Calculator</h1>
+<div id="error"><p>
+	Unable to evaluate this expression.
+</p></div>
 <div id="container">
 	<input type= "text" name = "result-field" id="result-field" disabled></input>
 	<table class="calc">

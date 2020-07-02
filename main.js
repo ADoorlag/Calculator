@@ -21,6 +21,7 @@ document.getElementById("back").addEventListener("mouseup", () => {
   document.getElementById("back-arrow").src = "Backspace.png";
 });
 
+//main calculator functions
 function clear() {
   field.value = "";
 }
@@ -31,10 +32,21 @@ function operate(e) {
     return;
   }
 
-  const input = field.value;
-  field.value = eval(input);
+  try {
+    const input = field.value;
+    field.value = eval(input);
+  } catch (err) {
+    //add show class and make it dissapear again after two seconds
+    document.getElementById("error").className = "show";
 
-  e.preventDefault();
+    setTimeout(() => {
+      document.getElementById("error").className = "";
+    }, 2000);
+
+    field.value = "";
+  } finally {
+    e.preventDefault();
+  }
 }
 
 function backSpace() {
@@ -120,6 +132,10 @@ document.addEventListener("keypress", function (e) {
 
     case 13:
       operate(e);
+      break;
+
+    case 99:
+      clear();
       break;
   }
 });

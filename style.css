@@ -20,6 +20,21 @@ body {
   margin: 5px;
 }
 
+#error {
+  display: none;
+}
+
+#error.show {
+  display: block;
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  width: 400px;
+  font-weight: 600;
+}
+
+/* container */
 #container {
   width: 355px;
   margin: 30px;
