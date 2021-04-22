@@ -14,11 +14,11 @@ document.getElementById("back").addEventListener("click", backSpace);
 
 //backspace mouse events
 document.getElementById("back").addEventListener("mousedown", () => {
-  document.getElementById("back-arrow").src = "Backspace(2).png";
+  document.getElementById("back-arrow").src = "images/Backspace(2).png";
 });
 
 document.getElementById("back").addEventListener("mouseup", () => {
-  document.getElementById("back-arrow").src = "Backspace.png";
+  document.getElementById("back-arrow").src = "images/Backspace.png";
 });
 
 //main calculator functions
@@ -59,11 +59,101 @@ function backSpace() {
   field.value = field.value.substring(0, field.value.length - 1);
 }
 
-//primary keyboard catching event
-document.addEventListener("keypress", function (e) {
-  const code = e.keyCode;
+//capture key value whenever it is pressed down and activate a corresponding calculator function if it corresponds to a calculator value
+document.addEventListener("keydown", function (e) {
+  const key = e.key || e.keyCode;
 
-  switch (code) {
+  switch (key) {
+
+    case "1":
+      addOne();
+      break;
+
+    case "2":
+      addTwo();
+      break;
+
+    case "3":
+      addThree();
+      break;
+
+    case "4":
+      addFour();
+      break;
+
+    case "5":
+      addFive();
+      break;
+
+    case "6":
+      addSix();
+      break;
+
+    case "7":
+      addSeven();
+      break;
+
+    case "8":
+      addEight();
+      break;
+
+    case "9":
+      addNine();
+      break;
+
+    case "0":
+      addZero();
+      break;
+
+    case "(":
+      addOpenParent();
+      break;
+
+    case ")":
+      addClosingParent();
+      break;
+
+    case ".":
+      addDot();
+      break;
+
+    case "-":
+      subtraction();
+      break;
+
+    case "+":
+      addition();
+      break;
+
+    case "*":
+      multiplication();
+      break;
+
+    case "/":
+      division();
+      break;
+
+    case "=":
+      operate(e);
+      break;
+
+    case "Enter":
+      operate(e);
+      break;
+
+    case "Backspace":
+      backSpace();
+      break;
+
+    case "c":
+      clear();
+      break;
+
+    case "Delete":
+      clear();
+      break;
+
+// depreciated keyCode values used in case a primary key value isn't captured or is undefined
     case 49:
       addOne();
       break;
@@ -136,25 +226,18 @@ document.addEventListener("keypress", function (e) {
       operate(e);
       break;
 
-    case 13:
+    case 187:
       operate(e);
       break;
 
     case 99:
       clear();
       break;
-  }
-});
-
-//secondary backspace and delete keyboard event
-document.addEventListener("keydown", function (e) {
-  const code = e.keyCode;
-
-  switch (code) {
+  
     case 8:
       backSpace();
       break;
-
+  
     case 46:
       clear();
       break;
@@ -165,7 +248,7 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-//keyboard functions
+//Functions to add calculable values
 function addSeven() {
   field.value += "7";
 }
