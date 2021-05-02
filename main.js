@@ -36,7 +36,7 @@ function operate(e) {
     return;
   }
 
-  //try and catch to ensure valid expression inputs
+  //try and catch to ensure valid expression inputs are evaluated by the math.js library
   try {
     const input = field.value;
     field.value = math.evaluate(input);
@@ -46,10 +46,10 @@ function operate(e) {
 
     setTimeout(() => {
       document.getElementById("error").className = "";
-    }, 2000);
+    }, 1000);
 
     field.value = "";
-  } finally {
+  }finally {
     e.preventDefault();
   }
 }
