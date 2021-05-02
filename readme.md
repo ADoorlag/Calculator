@@ -10,7 +10,7 @@ This application works in a similar way to any other calculator app. Inputs can 
 
 ## Live Version
 
-The live version of this app can be found ...
+The live version of this app can be found [HERE](https://doorlag-calculator.netlify.app/)
 
 ## License
 
